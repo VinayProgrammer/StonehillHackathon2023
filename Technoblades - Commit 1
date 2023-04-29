@@ -44,5 +44,20 @@ void loop() {
   lcd.print(distanceInch);
   lcd.print(" inch");
   delay(10);
+  if((distanceCm<=15))
+    {
+      digitalWrite(led, HIGH);
+      tone(buzzer, 450);
+    }
+    else if(distanceCm>15)
+    {
+      digitalWrite(led, LOW);
+      noTone(buzzer);
+    }
+  }
+  else
+  {
   
+  }
+}
   
