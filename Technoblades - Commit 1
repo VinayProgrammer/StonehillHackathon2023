@@ -38,7 +38,7 @@ void loop() {
     lcd.print(distanceCm); // Prints the distance value from the cursor
     lcd.print(" cm");
     delay(10);
-    lcd.SetCursor(0, 1);
+    lcd.setCursor(0, 1);
     lcd.print("Distance: ");
     lcd.print(distanceInch);
     lcd.print(" inch");
