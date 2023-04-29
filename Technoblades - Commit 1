@@ -1,0 +1,3 @@
+#include <LiquidCrystal.h> //Includes the LiquidCrystal Library
+LiquidCrystal lcd(12, 11, 5, 4, 3, 2) //Creates an LCD object
+
