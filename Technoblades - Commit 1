@@ -23,7 +23,7 @@ void loop() {
   buttonState = digitalRead(buttonPin);
   if (buttonState == HIGH)
   {
-    //Getting input form ultrasonic sensorand saving it
+    //Getting input form ultrasonic sensor and saving it
     digitalWrite(trigPin, LOW);
     delayMicroseconds(2);
     digitalWrite(triPin, High);
