@@ -26,7 +26,7 @@ void loop() {
     //Getting input form ultrasonic sensor and saving it
     digitalWrite(trigPin, LOW);
     delayMicroseconds(2);
-    digitalWrite(triPin, HIGH);
+    digitalWrite(trigPin, HIGH);
     delayMicroseconds(10);
     digitalWrite(trigPin, LOW);
     duration = pulseIn(echoPin, HIGH); 
