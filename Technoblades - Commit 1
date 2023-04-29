@@ -20,17 +20,16 @@ void setup() {
 
 void loop() {
   //checking if the button is pressed
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+  buttonState = digitalRead(buttonPin);
+  if (buttonState == HIGH)
+  {
+    //Getting input form ultrasonic sensorand saving it
+    digitalWrite(trigPin, LOW);
+    delayMicroseconds(2);
+    digitalWrite(triPin, High);
+    delayMicroseconds(10);
+    digitalWrite(trigPin, LOW);
+    duration = pulseIn(echoPin, HIGH); 
   
   distanceCm = duration * 0.034 / 2;
   distanceInch = duration * 0.0133 / 2;
