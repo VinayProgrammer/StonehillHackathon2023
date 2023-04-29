@@ -1,3 +1,11 @@
 #include <LiquidCrystal.h> //Includes the LiquidCrystal Library
 LiquidCrystal lcd(12, 11, 5, 4, 3, 2) //Creates an LCD object
 
+void setup() {
+  Serial.begin(9600);
+  pinMode(led, OUTPUT);
+  pinMode(trigPin, OUTPUT);
+  pinMode(echoPin, INPUT);
+  pinMode(buttonPin, INPUT);
+  lcd.begin(16,2); // Initializes the interface to the LCD screen, and specifies the dimensions(width and height) of the display
+  }
