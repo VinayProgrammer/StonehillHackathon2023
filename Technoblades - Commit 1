@@ -26,25 +26,24 @@ void loop() {
     //Getting input form ultrasonic sensor and saving it
     digitalWrite(trigPin, LOW);
     delayMicroseconds(2);
-    digitalWrite(triPin, High);
+    digitalWrite(triPin, HIGH);
     delayMicroseconds(10);
     digitalWrite(trigPin, LOW);
     duration = pulseIn(echoPin, HIGH); 
-  
-  distanceCm = duration * 0.034 / 2;
-  distanceInch = duration * 0.0133 / 2;
-  //Setting the LCD and printing on LCD
-  lcd.setCursor(0, 0); // Sets the location at which subsequent text written to the LCD will be displayed
-  lcd.print("Distance: "); // Prints string "Distance" on the LCD
-  lcd.print(distanceCm); // Prints the distance value from the cursor
-  lcd.print(" cm");
-  delay(10);
-  lcd.SetCursor(0, 1);
-  lcd.print("Distance: ");
-  lcd.print(distanceInch);
-  lcd.print(" inch");
-  delay(10);
-  if((distanceCm<=15))
+    distanceCm = duration * 0.034 / 2;
+    distanceInch = duration * 0.0133 / 2;
+    //Setting the LCD and printing on LCD
+    lcd.setCursor(0, 0); // Sets the location at which subsequent text written to the LCD will be displayed
+    lcd.print("Distance: "); // Prints string "Distance" on the LCD
+    lcd.print(distanceCm); // Prints the distance value from the cursor
+    lcd.print(" cm");
+    delay(10);
+    lcd.SetCursor(0, 1);
+    lcd.print("Distance: ");
+    lcd.print(distanceInch);
+    lcd.print(" inch");
+    delay(10);
+    if((distanceCm<=15))
     {
       digitalWrite(led, HIGH);
       tone(buzzer, 450);
