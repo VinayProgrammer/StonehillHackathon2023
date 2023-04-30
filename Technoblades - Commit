@@ -51,7 +51,7 @@ void loop() {
     else if(distanceCm>15)
     {
       digitalWrite(led, LOW);
-      noTone(buzzer);
+      noTone(buzzer)
     }
   }
   else
